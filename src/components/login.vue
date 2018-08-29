@@ -49,7 +49,6 @@ export default {
         .then(response => {
           store.commit("loginUser");
           localStorage.setItem("token", response.data.token);
-          localStorage.setItem("situation");
           this.$router.push({
             name: "add"
           });
