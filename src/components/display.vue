@@ -6,11 +6,7 @@
   <div class="row">
     <div class="col-md-12">
       <h2>
-        Book List
-        <a href="#/add-book">(Add Book)</a>
-      </h2>
-      <h2>Book List
-        <a @click="logout()">(Logout)</a>
+       List of Students
       </h2>
      <table class="table">
   <thead>

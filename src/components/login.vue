@@ -6,6 +6,7 @@
           <b-alert show>{{error.response.data.msg}}</b-alert>
         </div>
       </div>
+      <h3 style="text-align:center;">Login Now</h3>
       <b-form @submit="onSubmit">
         <b-form-group id="fieldsetHorizontal1"
                   horizontal
@@ -29,41 +30,41 @@
 </template>
 
 <script>
-
-import axios from 'axios'
-import store from '../store'
+import axios from "axios";
+import store from "../store";
 
 export default {
-  name: 'login',
-  data () {
+  name: "login",
+  data() {
     return {
       login: {},
       errors: []
-    }
+    };
   },
   methods: {
-    onSubmit (evt) {
-      evt.preventDefault()
-      axios.post(`http://localhost:4000/api/auth/login/`, this.login)
-      .then(response => {
-        store.commit('loginUser')
-        localStorage.setItem('token', response.data.token)
-        localStorage.setItem('situation', 'success')
-        this.$router.push({
-          name: 'add'
+    onSubmit(evt) {
+      evt.preventDefault();
+      axios
+        .post(`http://localhost:4000/api/auth/login/`, this.login)
+        .then(response => {
+          store.commit("loginUser");
+          localStorage.setItem("token", response.data.token);
+          localStorage.setItem("situation");
+          this.$router.push({
+            name: "add"
+          });
         })
-      })
-      .catch(e => {
-        this.loginError = true
-        console.log(e)
-        this.errors.push(e)
-      })
+        .catch(e => {
+          this.loginError = true;
+          console.log(e);
+          this.errors.push(e);
+        });
     },
-    register () {
+    register() {
       this.$router.push({
-        name: 'register'
-      })
+        name: "register"
+      });
     }
   }
-}
+};
 </script>

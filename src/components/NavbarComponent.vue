@@ -1,13 +1,34 @@
 <template>
     <nav class="navbar navbar-expand-md navbar-dark bg-dark mb-4">
-        <a class="navbar-brand" href="#">Vue App</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div v-if="loggedIn == true" style="color:#fff;"><a @click="logout()">Logout</a></div>
-        <div v-else style="color:#fff;"><a href="/login">Log In</a></div>
-    </nav>
+  <a class="navbar-brand" href="#">Navbar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav" v-if="loggedIn == true">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/add">Add</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/display">Display</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled"  @click="logout()">Logout</a>
+      </li>
+
+     
+    </ul>
+    <ul  class="navbar-nav" v-else>
+         <li class="nav-item">
+        <a class="nav-link disabled" href="/login">Log in</a>
+      </li>
+    </ul>
+    
+  </div>
+</nav>
 </template>
 
 <script>
