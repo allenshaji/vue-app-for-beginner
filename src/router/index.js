@@ -57,6 +57,10 @@ router.beforeEach((to, from, next) => {
     return
   }
 
+  if (to.path === '/register' && store.state.isLoggedIn) {
+    next({ name: 'Index' })
+    return
+  }
   next()
 })
 
