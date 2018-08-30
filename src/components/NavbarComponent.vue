@@ -6,7 +6,7 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav" v-if="loggedIn == true">
-      <li class="nav-item active">
+      <li class="nav-item">
         <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
@@ -16,14 +16,14 @@
         <a class="nav-link" href="/display">Display</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link disabled"  @click="logout()">Logout</a>
+        <a class="nav-link"  @click="logout()" style="float:right;">Logout</a>
       </li>
 
      
     </ul>
     <ul  class="navbar-nav" v-else>
          <li class="nav-item">
-        <a class="nav-link disabled" href="/login">Log in</a>
+        <a class="nav-link" href="/login">Log in</a>
       </li>
     </ul>
     
@@ -36,10 +36,7 @@ import store from '../store';
    export default {
         name:"NavbarComponent",
         data(){
-            return {
-                title:"ACME's Staff List",
-
-            }
+            return {}
         },
         computed: {
         loggedIn(){

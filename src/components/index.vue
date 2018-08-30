@@ -1,7 +1,6 @@
 <template>
   <div class="hello">
-    
-    <h1>{{ msg }}</h1>
+    <img src="../assets/welcome.png">
  
   </div>
 </template>
@@ -10,15 +9,13 @@
 export default {
   name: 'index',
   data () {
-    return {
-      msg: 'Welcome to Your App'
-    }
+    return {}
   }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style>
 h1, h2 {
   font-weight: normal;
 }
@@ -33,5 +30,10 @@ li {
 a {
   color: #42b983;
 }
-
+body {
+  background: linear-gradient(45deg, #17ead9, #6078ea);
+  height: 100vh;
+  margin: 0;
+  background-attachment: fixed;
+}
 </style>

@@ -50,7 +50,7 @@ export default {
           store.commit("loginUser");
           localStorage.setItem("token", response.data.token);
           this.$router.push({
-            name: "add"
+            name: "Index"
           });
         })
         .catch(e => {
