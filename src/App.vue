@@ -1,15 +1,19 @@
 <template>
   <div id="app">
      <navbar-component></navbar-component>
+     
     <router-view/>
+    <footer-component></footer-component>
   </div>
 </template>
 
 <script>
-import NavbarComponent from '@/components//NavbarComponent.vue'
+import NavbarComponent from '@/components/NavbarComponent.vue'
+import FooterComponent from '@/components/FooterComponent.vue'
 export default {
   name: 'App',
-  components: {NavbarComponent}, 
+  components: {NavbarComponent,
+  FooterComponent}, 
 }
 </script>
 
@@ -25,3 +29,5 @@ body{
   overflow-x: hidden;
 }
 </style>
+
+
