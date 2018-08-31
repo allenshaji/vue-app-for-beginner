@@ -11,15 +11,15 @@
      <table class="table">
   <thead>
     <tr>
-      <th scope="col">{{Authorization}}</th>
+      <th scope="col">Id</th>
       <th scope="col">Name</th>
       <th scope="col">Branch</th>
       <th scope="col">Age</th>
     </tr>
   </thead>
   <tbody>
-    <tr v-for="er in students">
-      <th scope="row">1</th>
+    <tr v-for="(er,index) in students">
+      <th scope="row">{{index+1}}</th>
       <td>{{er.name}}</td>
       <td>{{er.branch}}</td>
       <td>{{er.age}}</td>
