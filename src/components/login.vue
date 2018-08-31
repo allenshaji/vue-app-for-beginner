@@ -15,8 +15,8 @@
               </div>
               <h3 class="login-page-title">Sign In</h3>
               <div class="form-group">
-                <label for="email"> Username </label>
-                <input type="text" name="email" id="email" class="form-control" aria-describedby="Enter username" placeholder="Enter username"
+                <label for="username"> Username </label>
+                <input type="text" name="username" id="username" class="form-control" aria-describedby="Enter username" placeholder="Enter username"
                   maxlength="75" v-model="login.username"/>
                 <span class="help-block"></span>
               </div>
@@ -35,7 +35,7 @@
                   </div>
                 </div>
                 <div class="form-group col-6 text-right spt-3">
-                  <router-link to="/forget-password">Forgot your password?</router-link> 
+                  <router-link to="">Forgot your password?</router-link> 
                 </div>
               </div>
               <div class="mt-10">
